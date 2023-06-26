@@ -3,19 +3,17 @@ package com.example.Spring_Develhope_Exercise.controller;
 import com.example.Spring_Develhope_Exercise.Model.Meal;
 import com.fasterxml.jackson.databind.ser.std.ArraySerializerBase;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @RestController
 public class MealController {
 
-    private List<Meal> chefsSpecials = Arrays.asList(
+    /*private List<Meal> chefsSpecials = Arrays.asList(
             new Meal("Carbonara","Spaghetti con guanciale, uovo, pepe e pecorino",9.50),
             new Meal("Spaghetti allo Scoglio","Spaghetti con frutti di mare",13.50),
             new Meal("Tortellini in Brodo","Tortellini nel brodo",8.70)
@@ -40,5 +38,30 @@ public class MealController {
         } else {
             return ResponseEntity.ok(chefsSpecials.get(dayOfWeekIndex));
         }
+    }*/
+
+    /*private List<Meal> meals = new ArrayList<>();
+
+    @GetMapping("/get/meal")
+    public ResponseEntity<List<Meal>> getMeal(){
+        return ResponseEntity.ok(meals);
     }
+    @PutMapping ("/put/meal")
+    public ResponseEntity<String> putMeal(@RequestBody Meal meal){
+        this.meals.add(meal);
+        return ResponseEntity.ok("Meals added!");
+    }
+
+    @DeleteMapping("/delete/meal/{mealName}")
+    public ResponseEntity<String> deleteMeal(@PathVariable String mealName){
+        this.meals.removeIf(meal -> meal.getName().equals(mealName));
+        return ResponseEntity.ok("Meal deleted!");
+    }
+
+    @PostMapping("/post/replace-meal")
+    public ResponseEntity<String> replaceMeal(@RequestBody Meal meal){
+        this.meals.removeIf(oldMeal -> oldMeal.getName().equals(meal.getName()));
+        this.meals.add(meal);
+        return ResponseEntity.ok("Meal Updated!");
+    }*/
 }
