@@ -1,4 +1,4 @@
-package com.example.Spring_Develhope_Exercise.Model;
+package com.example.Spring_Develhope_Exercise.model;
 
 
 public class Meal {
